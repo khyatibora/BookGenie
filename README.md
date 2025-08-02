@@ -1,36 +1,110 @@
-# 📚 BookGenie - Your AI-Powered Reading Assistant
+# 📚 BookGenie
 
-BookGenie is a beautifully designed web interface for recommending books based on genre, mood, or reader preference. Powered by IBM Watson Assistant, it creates a seamless and engaging experience for book lovers.
+**BookGenie** is an AI-powered book recommendation assistant designed to help users explore books across genres and moods. It features a clean, interactive web interface and integrates IBM Watson Assistant for chatbot-based recommendations.
+
+---
 
 ## 🌟 Features
 
-- 🖼️ Stunning background with high-quality book-themed imagery
-- ✨ Stylish and responsive design using HTML and CSS
-- 🧠 IBM Watson Assistant integration for interactive chatbot-based book recommendations
-- 📖 Sample book highlights with elegant card layouts
-- 📱 Mobile-friendly design
+* 🔍 Get book suggestions by **genre**, **mood**, or **author**
+* 🤖 Chatbot-powered interaction via IBM Watson Assistant
+* 🎨 Beautiful front-end UI with genre-based book cards
+* 📚 Supports genres like:
 
-## 🚀 Getting Started
+  * Horror 🦹
+  * Thriller 🔍
+  * Romance 💌
+  * Inspirational 💡
 
-To use the app:
+---
 
-1. **Download or clone the repository**
-2. Open the file `index.html` in any modern browser
-3. Interact with BookGenie and enjoy personalized recommendations via the chatbot at the bottom right
+## 🚀 Live Demo
 
-## 💬 How It Works
+🔗 [View Demo](https://khyatibora.github.io/BookGenie) *(Add GitHub Pages link if hosted)*
 
-- Users are welcomed with a book-themed homepage
-- Clicking **"Get Started"** triggers a placeholder action (can be extended)
-- The **IBM Watson Assistant chatbot** provides:
-  - Genre-based suggestions
-  - Mood-based recommendations
-  - Book availability checks
+---
 
-## 🧠 IBM Watson Assistant
+## 🖼 Homepage Preview
 
-The chatbot is embedded using this configuration:
-```js
-integrationID: "c70cdf19-2918-4f10-b011-699bee8d2880",
-region: "au-syd",
-serviceInstanceID: "17635941-f8ca-49d4-bee8-955b8dc35f20"
+![BookGenie Screenshot](https://user-images.githubusercontent.com/your-image-path.png)
+*A clean layout showing book cards and Watson chatbot integration.*
+
+---
+
+## 🛠️ Technologies Used
+
+* **HTML5** + **CSS3**
+* **JavaScript** (minimal for chat integration)
+* **IBM Watson Assistant** – [Watson Integration](https://cloud.ibm.com/assistant/)
+* 📷 Background & book cover images from Unsplash & Amazon
+
+---
+
+## 📦 Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/khyatibora/BookGenie.git
+   cd BookGenie
+   ```
+
+2. Open `index.html` in your browser to explore the site locally.
+
+---
+
+## 🤖 Watson Chat Integration
+
+The chatbot is embedded via IBM Watson Assistant script. Integration IDs can be found in the `index.html` file:
+
+```html
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "YOUR-INTEGRATION-ID",
+    region: "YOUR-REGION",
+    serviceInstanceID: "YOUR-SERVICE-ID",
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(() => {
+    const t = document.createElement('script');
+    t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+```
+
+> 🚩 **Note**: Replace integration ID with your own if deploying independently.
+
+---
+
+## 📚 Sample Conversations
+
+* **User**: "Can you recommend a romantic book?"
+  **Assistant**: "Sure! Try *Me Before You* by Jojo Moyes."
+
+* **User**: "What thriller books do you have?"
+  **Assistant**: "You might enjoy *Gone Girl* by Gillian Flynn."
+
+---
+
+## ✨ Future Enhancements
+
+* 📖 Dynamic book database/API integration
+* 🎯 Mood-based suggestions with filters
+* 📱 Mobile responsive chatbot improvements
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first.
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+Made with ❤️ by [@khyatibora](https://github.com/khyatibora)
