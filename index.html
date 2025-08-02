@@ -107,17 +107,15 @@
 
   <!-- Watson Assistant Chat -->
   <script>
-    window.watsonAssistantChatOptions = {
-      integrationID: "c70cdf19-2918-4f10-b011-699bee8d2880",
-      region: "au-syd",
-      serviceInstanceID: "17635941-f8ca-49d4-bee8-955b8dc35f20",
-      onLoad: async (instance) => { await instance.render(); }
-    };
-    setTimeout(function() {
-      const t = document.createElement('script');
-      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
-      document.head.appendChild(t);
-    });
-  </script>
-</body>
-</html>
+  window.watsonAssistantChatOptions = {
+    integrationID: "36bdcdaa-3b3a-404e-ae8d-494f1a599506", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "17635941-f8ca-49d4-bee8-955b8dc35f20", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
